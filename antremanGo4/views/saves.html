@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/views/saves.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="logo">
+                <img src="img/" alt="Avatar" class="avatar">
+                <span><i>İDEA</i></span>
+            </div>
+            <div class="menu">
+                <div class="menuitems">
+                    <a href="/" style="color: black; text-decoration: none;">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notification</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <span>Saved İdea</span>
+                </div>
+            </div>
+            <div class="userprofile">
+                <img src="img/9da49d89-ad96-4522-900a-e8e32f98c233.jpg" alt="Avatar" class="avatar">
+                <span>Ömer Faruk İspiroğlu&nbsp;</span>
+                <span><i class="fa-solid fa-ellipsis"></i></span>
+            </div>
+        </div>
+        <div class="col-md-6 mt-5">
+            {{ range $index,$value := .Saves }}
+            <div class="idea">
+                <img src="img/Hakan Yüksel.jpg" alt="Avatar" class="avatar">
+                <span class="username">Hakan Yüksel</span>
+                <span class="timestamp">1h ago</span>
+                <div class="content">
+                    {{$value.İdea}}
+                </div>
+                <div class="container-1">
+                    <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                    <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                    <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                    <button class="likebtn" type="submit"><i class="fa-regular fa-bookmark"></i></button>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

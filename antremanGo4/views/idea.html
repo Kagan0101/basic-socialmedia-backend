@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İdea</title>
+    <link rel="stylesheet" href="/views/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="logo">
+                <img src="img/" alt="Avatar" class="avatar">
+                <span><i>İDEA</i></span>
+            </div>
+            <div class="menu">
+                <div class="menuitems">
+                    <a href="/" style="color: black; text-decoration: none;">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Search</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="menuitems">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notification</span>
+                </div>
+                <div class="menuitems">
+                    <a href="/saves" style="color: black; text-decoration: none;">
+                        <i class="fa-regular fa-bookmark"></i>
+                        <span>Saved</span>
+                    </a>
+                </div>
+            </div>
+            <div class="userprofile">
+                <img src="/img/file.png" alt="Avatar" class="avatar">
+                <span>Hasan Yıldırım&nbsp;</span>
+                <span><i class="fa-solid fa-ellipsis"></i></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form action="/send" method="post" enctype="multipart/form-data">
+                <div>
+                    <input class="messagebox" placeholder="İdea" name="Idea">
+                    <span><button class="sendbtn" type="submit"><i class="fa-regular fa-paper-plane"></i></button></span>
+                </div>
+            </form>
+            <div class="container">
+                {{range $index,$value := .Posts }}
+                <div class="idea" data-id="{{$value.ID}}">
+                    <img src="img/Hakan Yüksel.jpg" alt="Avatar" class="avatar">
+                    <span class="username">Hakan Yüksel</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content" id="contenttt">
+                        {{$value.Idea}}
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="{{$value.Likeclass}}"></i></button>
+                        <span class="likenum">{{$value.Likenumber}}</span>
+                        <button class="unlikebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <span>5</span>
+                        <button class="commentbtn"><i class="fa-regular fa-comment"></i></button>
+                        <span>2</span>
+                        <button class="saveButton" type="button" id="saveButton"><i class="fa-regular fa-bookmark" id="imge" ></i></button>
+                    </div>
+                </div>
+                {{end}}
+                <div class="idea">
+                    <img src="img/Murat İnce.jpg" alt="Avatar" class="avatar">
+                    &nbsp;
+                    <span class="username">Murat İnce</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Gençler yine sınavdan herkes düşük almış.
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <a href=""><button class="likebtn" type="button"><i class="fa-regular fa-bookmark"></i></button></a>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="/img/Ebru Yılmaz İnce.jpg" alt="Avatar" class="avatar">
+                    <span class="username">Ebru Yılmaz İnce</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Sonraki hafta telefon kılıfı yapıyoruz Hocam.
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="img/Hakan Yüksel.jpg" alt="Avatar" class="avatar">
+                    <span class="username">Hakan Yüksel</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Sınıfta kimse elektrik bilmiyor ama "hocam akşam cs2 gelir misiniz" demeyi biliyorlar :( 
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="" alt="Avatar" class="avatar">
+                    <span class="username">Muzaffer Tatlı</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Gençler ödevler yine yapılmamış.
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="Halit Çetiner.jpg" alt="Avatar" class="avatar">
+                    <span class="username">Halit Çetiner</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Kurbanlık fiyatları ne kadar?
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="9da49d89-ad96-4522-900a-e8e32f98c233.jpg" alt="Avatar" class="avatar">
+                    <span class="username">Ömer Faruk İspiroğlu</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Neşet Babanın zamanı olmaz
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="web-sitesi-nasıl-yapılır.jpg" alt="Avatar" class="avatar">
+                    <span class="username">John Doe</span>
+                    <span class="timestamp">2h ago</span>
+                    <div class="content">
+                        Ömer emulatör delisi bir çocuk
+                    </div> 
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>   
+                </div>
+                <div class="idea">
+                    <img src="web-tasarimi-nedir-ne-ise-yarar.jpg" alt="Avatar" class="avatar">
+                    <span class="username">Jane Smith</span>
+                    <span class="timestamp">1h ago</span>
+                    <div class="content">
+                        Nullam eget libero nec justo tincidunt tincidunt. Sed auctor, nunc vel lacinia hendrerit, urna odio bibendum justo.
+                    </div>
+                    <div class="container-1">
+                        <button class="likebtn"><i class="fa-solid fa-heart"></i></button>
+                        <button class="likebtn"><i class="fa-solid fa-heart-crack"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-comment"></i></button>
+                        <button class="likebtn"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <!-- Diğer tweetler burada -->
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="searchdiv">
+                <input class="Search" placeholder="Search">
+            </div>
+            <div class="trendideabox">
+                <div class="trendidea">
+                    &nbsp;#depremhakkındagörüşler
+                </div>
+                <div class="trendidea">
+                    &nbsp;#atamalarhakkındagörüşler
+                </div>
+                <div class="trendidea">
+                    &nbsp;#oyunfiyatları
+                </div>
+                <div class="trendidea">
+                    &nbsp;#tarih
+                </div>
+                <div class="trendidea">
+                    &nbsp;#işssizliksorunu
+                </div>
+            </div>
+            <div class="wishfriends">
+                <div class="friendslist">
+                    &nbsp;&nbsp;&nbsp;TANIYOR OLABİLECEĞİN KİŞİLER
+                </div>
+                <div class="friendslist">
+                    &nbsp;
+                    <img src="a7d69e70b10368779dcbdb672bd56f9e.jpg" alt="Avatar" class="avatar">
+                    <span>Barbara Palvin&nbsp;</span>
+                    <span><i class="fa-solid fa-ellipsis"></i></span>
+                </div>
+                <div class="friendslist">
+                    &nbsp;
+                    <img src="dsgfsgdsgdfs.jpg" alt="Avatar" class="avatar">
+                    <span>Jennifer Lawrence&nbsp;</span>
+                    <span><i class="fa-solid fa-ellipsis"></i></span>
+                </div>
+                <div class="friendslist">
+                    &nbsp;
+                    <img src="arthurmorgan.jpg" alt="Avatar" class="avatar">
+                    <span>Arthur Morgan&nbsp;</span>
+                    <span><i class="fa-solid fa-ellipsis"></i></span>
+                </div>
+                <div class="friendslist">
+                    &nbsp;
+                    <img src="emmastone.jpg" alt="Avatar" class="avatar">
+                    <span>Emma Stone&nbsp;</span>
+                    <span><i class="fa-solid fa-ellipsis"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/views/like.js"></script>
+    <script src="/views/button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
+

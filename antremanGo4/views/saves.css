@@ -1,0 +1,144 @@
+body {
+            
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 500px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container-1{
+    width:50px;
+}
+.menu{
+    max-width: 260px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding: 20px;
+    border: 2px solid #f0eaea;
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.menuitems{
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px;
+}
+.menuitems:last-child{
+    border-bottom: none;
+    padding-left: 10px;
+    padding-bottom: 0;
+}
+.menuitems:hover{
+    background-color: #cceeff;
+    border-radius: 4px;
+}
+.idea {
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px;
+}
+.idea:last-child {
+    border-bottom: none;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.username {
+    font-weight: bold;
+}
+.timestamp {
+    color: #657786;
+}
+.content {
+    margin-top: 10px;
+}
+.container-1{
+    width:100px;
+    display: flex;
+}
+.likebtn{
+    background: transparent;
+    border: none;
+}
+.messagebox{
+    margin-top: 10px;
+    width: 600px;
+    height:100px;
+    border-radius: 20px;
+}
+.searchdiv{
+    margin: 10px;
+}
+.Search{
+    margin: 10px;
+    border-radius: 4px;
+    border-color: grey;
+}
+.trendideabox{
+    max-width: 300px;
+    margin-top: 60px;
+    padding: 20px;
+    border: 2px solid #f0eaea;
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.trendidea{
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px 0;
+}
+.trendidea:hover{
+    background-color:#cceeff;
+    border-radius: 10px;
+}
+.trendidea:last-child{
+    border-bottom: none;
+}
+.logo{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.sendbtn{
+    background: transparent;
+    border: none;
+}
+.userprofile{
+    margin: 50px;
+    background-color: #ffffff;
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.idea:hover{
+    background-color:#f0f0f0;
+    border-radius: 10px;
+}
+.wishfriends{
+    max-width: 300px;
+    margin-top: 60px;
+    padding: 20px;
+    border: 2px solid #f0eaea;
+    border-radius:10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.friendslist{
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px 0;
+}
+.friendslist:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.friendslist:hover{
+    background-color:#cceeff;
+    border-radius: 10px;
+}
